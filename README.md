@@ -1,2 +1,2 @@
-# Programa-o-de-Solu-es-Computacionais---Java
+# Programacao-de-Solucoes-Computacionais-Java
 Depósito de exercícios

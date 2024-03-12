@@ -1,0 +1,15 @@
+package com.mycompany.ex1aula4;
+
+import javax.swing.JOptionPane;
+
+public class Ex1Aula4 {
+
+    public static void main(String[] args) {
+        int inteiro = Integer.parseInt(JOptionPane.showInputDialog("Informe um número inteiro"));
+        double real = Double.parseDouble(JOptionPane.showInputDialog("Informe um número real"));
+        
+        if (inteiro < real){
+            JOptionPane.showMessageDialog(null,"O número inteiro é menor do que o número real");
+        }
+    }
+}

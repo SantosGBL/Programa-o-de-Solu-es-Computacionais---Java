@@ -1,0 +1,20 @@
+//Ler a cotação do dólar e a quantidade de dólares. Converter para real e mostrar o
+//resultado.
+
+package com.mycompany.ex1aula2;
+
+import javax.swing.JOptionPane;
+
+public class Ex1Aula2 {
+
+    public static void main(String[] args) {
+        double real, cotacaoatual, multiplicacao;
+        
+        real = Double.parseDouble(JOptionPane.showInputDialog (" Informe o valor em real"));
+        cotacaoatual = Double.parseDouble(JOptionPane.showInputDialog (" Informe o valor da moeda"));
+        
+        multiplicacao = real / cotacaoatual;
+        
+        JOptionPane.showMessageDialog(null," A contação atual é: " + multiplicacao);
+    }
+}

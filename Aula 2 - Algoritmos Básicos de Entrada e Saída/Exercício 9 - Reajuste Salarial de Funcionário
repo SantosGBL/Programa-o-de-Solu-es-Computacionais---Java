@@ -1,0 +1,19 @@
+//9. Ler o salário mensal atual de um funcionário e o percentual de reajuste. Calcular e exibir o
+//valor do novo salário.
+
+package com.mycompany.ajustesalarial;
+
+import javax.swing.JOptionPane;
+
+public class AjusteSalarial {
+    public static void main(String[] args) {
+        double salario, ajuste, novoSalario;
+        
+        salario = Double.parseDouble(JOptionPane.showInputDialog (" Informe o salário atual "));
+        ajuste = Double.parseDouble(JOptionPane.showInputDialog (" Informe a porcentagem do reajuste "));
+        
+        novoSalario = salario * (1 + ajuste / 100) ;
+        
+        JOptionPane.showMessageDialog(null, "O novo salário é: "+ novoSalario);
+    }
+}

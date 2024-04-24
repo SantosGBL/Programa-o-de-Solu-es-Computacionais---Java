@@ -1,0 +1,21 @@
+//3. Calcular o pagamento de comissão de vendedores de peças, levando-se em consideração
+//que sua comissão será de 5% do total da venda e que você tem os seguintes dados: preço
+//unitário da peça e quantidade vendida.
+
+package com.mycompany.comissaodevendedores;
+
+import javax.swing.JOptionPane;
+
+public class ComissaoDeVendedores {
+
+    public static void main(String[] args) {
+        double quantidade, preco, comissao;
+        
+        quantidade = Double.parseDouble(JOptionPane.showInputDialog(" Informe a quantidade de peças vendidas "));
+        preco = Double.parseDouble(JOptionPane.showInputDialog(" Informe o preço das peças vendidas "));
+        
+        comissao = quantidade * preco *0.05;
+        
+        JOptionPane.showMessageDialog(null, " A comissão do vendedor é: " + comissao);
+    }
+}

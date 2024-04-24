@@ -1,0 +1,21 @@
+//7. Ler a idade de uma pessoa expressa em anos, meses e dias e exibir a idade dessa pessoa
+//expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias.
+
+package com.mycompany.idadeemdias.pt2;
+
+import javax.swing.JOptionPane;
+
+public class IdadeEmDiasPt2 {
+
+    public static void main(String[] args) {
+        double idade, meses, dias, dias2;
+        
+        idade = Double.parseDouble(JOptionPane.showInputDialog(" Informe a idade "));
+        meses = Double.parseDouble(JOptionPane.showInputDialog(" Informe os meses "));
+        dias = Double.parseDouble(JOptionPane.showInputDialog(" Informe a dias "));
+        
+        dias2 = idade * 365 + meses * 30 + dias;
+        
+        JOptionPane.showMessageDialog(null, " A idade corresponde em dias: " + dias2);
+    }
+}

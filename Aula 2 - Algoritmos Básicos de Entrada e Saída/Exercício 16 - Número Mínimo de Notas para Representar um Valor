@@ -1,0 +1,50 @@
+//16. Faça um programa que lê um número inteiro e calcula o menor número de notas
+//suficiente para representar tal valor. Considere a existência de notas de valores 200, 100, 50,
+//20, 10, 5, 2 e 1. Por exemplo, se o valor lido for 643, esse valor pode ser representado por:
+//- 3 notas de 200
+//- 2 notas de 20
+//- 1 nota de 2
+//- 1 nota de 1
+//Assim, seu programa deve exibir o texto “7 notas”. Dica: Use os operadores / e %.
+package com.mycompany.valoremnotas;
+
+import javax.swing.JOptionPane;
+
+public class ValorEmNotas {
+
+    public static void main(String[] args) {
+        
+        int valor = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor: "));
+        
+        //Aqui, calculamos o número de notas de 200 necessárias para representar o valor inserido 
+        //pelo usuário e armazenamos esse valor em nota200. Em seguida, usamos o operador %= para 
+        //atualizar o valor para o restante após a divisão por 200.Esse processo é repetido para 
+        //cada valor de nota (100, 50, 20, 10, 5, 2 e 1) até chegarmos às notas de 1.
+        int nota200 = valor / 200;
+        valor %= 200;
+        
+        int nota100 = valor / 100;
+        valor %= 100;
+        
+        int nota50 = valor / 50;
+        valor %= 50;
+        
+        int nota20 = valor / 20;
+        valor %= 20;
+        
+        int nota10 = valor / 10;
+        valor %= 10;
+        
+        int nota5 = valor / 5;
+        valor %= 5;
+        
+        int nota2 = valor / 2;
+        valor %= 2;
+        
+        int nota1 = valor;
+        
+        int notasTotais = nota200 + nota100 + nota50 + nota20 + nota10 + nota5 + nota2 + nota1;
+        
+        JOptionPane.showMessageDialog(null,notasTotais + " notas");
+    }
+}

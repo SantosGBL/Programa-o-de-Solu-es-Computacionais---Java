@@ -1,0 +1,25 @@
+//14. Suponha que um aluno tem três notas: A, B e C. Para calcular a média final, seu
+//professor aplica os pesos 2, 3 e 5, respectivamente. Escreva um programa que lê os valores
+//A, B e C e seus respectivos pesos. O programa deve produzir a média ponderada conforme
+//descrito.
+
+package com.mycompany.mediaaritimetica;
+
+import javax.swing.JOptionPane;
+
+public class MediaAritimetica {//média ponderada rsrs
+
+    public static void main(String[] args) {
+       double a = Double.parseDouble(JOptionPane.showInputDialog("Informe a nota A: "));
+       double b = Double.parseDouble(JOptionPane.showInputDialog("Informe a nota B: "));
+       double c = Double.parseDouble(JOptionPane.showInputDialog("Informe a nota C: "));
+       
+       double pesoA = Double.parseDouble(JOptionPane.showInputDialog("Informe no peso da nota A: "));
+       double pesoB = Double.parseDouble(JOptionPane.showInputDialog("Informe no peso da nota A: "));
+       double pesoC = Double.parseDouble(JOptionPane.showInputDialog("Informe no peso da nota A: "));
+       
+       double mediaPonderada = a * pesoA + b * pesoB + c + pesoC / pesoA + pesoB + pesoC;
+       
+       JOptionPane.showMessageDialog(null, "Sua média ponderada é: \n" + mediaPonderada);
+    }
+}

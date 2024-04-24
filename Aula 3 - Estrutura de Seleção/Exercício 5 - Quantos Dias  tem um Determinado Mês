@@ -1,0 +1,43 @@
+//5- Ler um número inteiro no intervalo [1, 12]. Considerando que cada número
+//representa um mês da seguinte forma: 1: Janeiro, 2: Fevereiro e assim por diante,
+//exiba o número de dias que o mês cujo respectivo número digitado possui.
+
+package com.mycompany.mesesapartirdeumnumero;
+
+import javax.swing.JOptionPane;
+
+public class MesesaPartirdeumNumero {
+
+    public static void main(String[] args) {
+        int mes = Integer.parseInt(JOptionPane.showInputDialog
+        ("Informe um mês no intervalo de 1 a 12: "));
+        int numDias = 0;
+        
+        switch (mes){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                numDias = 31;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                numDias = 30;
+                break;
+            case 2:
+                numDias = 28; // Considerando apenas ano bissexto
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Este mês não esta no intervalo de 1 a 12");   
+        }
+        
+        if (numDias != 0){
+            JOptionPane.showMessageDialog(null, "O mês " + mes + " tem: \n" + numDias + " dias");
+        }
+    }
+}

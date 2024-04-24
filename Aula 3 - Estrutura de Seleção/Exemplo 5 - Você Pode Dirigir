@@ -1,0 +1,17 @@
+package com.mycompany.vocepodedirigir;
+
+import javax.swing.JOptionPane;
+
+
+public class VocePodeDirigir {
+
+    public static void main(String[] args) {
+         int idade = Integer.parseInt(JOptionPane.showInputDialog("Informe a sua idade: "));
+         
+         if (idade >= 18){
+             JOptionPane.showMessageDialog(null, "Sim, você pode dirigir");
+         }  else {
+             JOptionPane.showMessageDialog(null, "Não, você não pode dirigir por enquanto");
+         }
+    }
+}

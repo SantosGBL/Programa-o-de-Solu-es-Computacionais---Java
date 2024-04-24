@@ -1,0 +1,18 @@
+//4. Ler um valor inteiro e exibir seu antecessor.
+
+package com.mycompany.valoranterior;
+
+import javax.swing.JOptionPane;
+
+public class ValorAnterior {
+
+    public static void main(String[] args) {
+        int valor, subtracao;
+        
+        valor = Integer.parseInt(JOptionPane.showInputDialog(" Digite um valor "));
+        
+        subtracao = valor - 1;
+        
+        JOptionPane.showMessageDialog(null," O antecesor desse valor é: " + subtracao );
+    }
+}

@@ -1,0 +1,22 @@
+//2. Ler 4 números, calcular o quadrado para cada um, somar todos os quadrados e mostrar o
+//resultado.
+
+package com.mycompany.somadosquadrados;
+
+import javax.swing.JOptionPane;
+
+public class SomaDosQuadrados {
+
+    public static void main(String[] args) {
+        double valor1, valor2, valor3, valor4, soma;
+        
+        valor1 = Double.parseDouble(JOptionPane.showInputDialog ("Digite o primeiro valor "));
+        valor2 = Double.parseDouble(JOptionPane.showInputDialog ("Digite o segundo valor "));
+        valor3 = Double.parseDouble(JOptionPane.showInputDialog ("Digite o terceiro valor "));
+        valor4 = Double.parseDouble(JOptionPane.showInputDialog ("Digite o quarto valor "));
+        
+        soma = valor1 * valor1 + valor2 * valor2 + valor3 * valor3 + valor4 * valor4;
+        
+        JOptionPane.showMessageDialog(null, "A soma dos quadrados dos 4 valores  é: " + soma);               
+    }
+}

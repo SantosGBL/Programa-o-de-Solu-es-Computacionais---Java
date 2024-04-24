@@ -1,0 +1,25 @@
+//12. No plano cartesiano, a distância entre dois pontos p1(x1, y1) e p2(x2, y2) é definida
+//como dist (p1, p2) = (x2 − x1)² + (y2 - y1)²
+//Escreva um programa que lê os valores x1, y1, x2 e y2 nesta ordem e exibe a distância entre
+//p1 e p2. Utilize valores reais.
+
+package com.mycompany.distanciaentrepontos;
+
+import javax.swing.JOptionPane;
+
+public class DistanciaEntrePontos {
+
+    public static void main(String[] args) {
+        double aX = Double.parseDouble(JOptionPane.showInputDialog("Informe a cordenada X do Ponto A: "));
+        double aY = Double.parseDouble(JOptionPane.showInputDialog("Informe a cordenada Y do Ponto A: "));
+        double bX = Double.parseDouble(JOptionPane.showInputDialog("Informe a cordenada X do Ponto B: "));
+        double bY = Double.parseDouble(JOptionPane.showInputDialog("Informe a cordenada Y do Ponto B: "));
+        
+        // A função sqrt() da classe Math serve para calcular a raiz quadrada
+        // A função pow() da classe Math serve para calcular potencia
+        double distanciaEntrePontos = Math.sqrt(Math.pow(bX - aX,2) + Math.pow(bY - aY,2));
+        
+        JOptionPane.showMessageDialog(null, "A distancia entre pontos A e B são: " + distanciaEntrePontos);
+    }
+    
+}

@@ -1,0 +1,18 @@
+//3. Ler três valores reais e exibir o maior valor entre eles. Suponha que eles sejam
+//diferentes.
+
+package com.mycompany.qualmaiornumero;
+
+import javax.swing.JOptionPane;
+
+public class QualMaiorNumero {
+
+    public static void main(String[] args) {
+        double valor1 = Double.parseDouble(JOptionPane.showInputDialog("Informe o primeiro valor"));
+        double valor2 = Double.parseDouble(JOptionPane.showInputDialog("Informe o segundo valor"));
+        double valor3 = Double.parseDouble(JOptionPane.showInputDialog("Informe o terceiro valor"));
+        
+        double maiorValor = Math.max(valor1, Math.max(valor2, valor3));
+        JOptionPane.showMessageDialog(null, "O maior valor e " + maiorValor);
+    }
+}

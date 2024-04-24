@@ -1,1 +1,20 @@
+//1. Ler um número inteiro e exibir se ele é positivo, negativo ou neutro (0).
 
+package com.mycompany.qualnumeroreal;
+
+import javax.swing.JOptionPane;
+
+public class QualNumeroReal {
+
+    public static void main(String[] args) {
+        double numero = Double.parseDouble(JOptionPane.showInputDialog("Informe um número: "));
+        
+        if (numero > 0){
+            JOptionPane.showMessageDialog(null, numero + " É positivo");
+        }   else if (numero < 0){
+            JOptionPane.showMessageDialog(null, numero + " É negativo");
+        }   else {
+            JOptionPane.showMessageDialog(null, numero + " É nulo/neutro");
+        }
+    }
+}

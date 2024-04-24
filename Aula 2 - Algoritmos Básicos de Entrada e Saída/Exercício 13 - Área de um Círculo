@@ -1,0 +1,19 @@
+//13. A área de um círculo pode ser calculada da seguinte forma
+//A = π * r²
+//Faça um programa que lê o valor do raio e exibe a área calculada. Vasculhe a documentação
+//da classe Math no link a seguir e utilize a sua constante que representa o valor de pi.
+
+package com.mycompany.areadocirculo;
+
+import javax.swing.JOptionPane;
+
+public class AreaDoCirculo {
+
+    public static void main(String[] args) {
+        double raio = Double.parseDouble(JOptionPane.showInputDialog("Informe o raio do círciulo: "));
+        
+        double area = Math.PI * (raio * raio);
+        
+        JOptionPane.showMessageDialog(null, "A área do círculo é de: " + area);
+    }
+}

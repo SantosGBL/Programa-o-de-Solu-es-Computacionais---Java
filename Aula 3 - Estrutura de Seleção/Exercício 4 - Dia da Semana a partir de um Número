@@ -1,0 +1,41 @@
+//Ler um inteiro no intervalo [1, 7] e exibir o dia da semana associado a ele, como a
+//seguir: 1: Domingo, 2: Segunda, 3: Terça. E assim por diante.
+
+package com.mycompany.diadasemanaapartirdeumnumero;
+
+import javax.swing.JOptionPane;
+
+public class DiadaSemanaaPartirdeumNumero {
+
+    public static void main(String[] args) {
+        int numero = Integer.parseInt(JOptionPane.showInputDialog
+        ("Informe um número inteiro no intervalo de 1 a 7: "));
+        
+        switch (numero){
+            case 1:
+                JOptionPane.showMessageDialog(null, "O dia da semana é\n SEGUNDA-FEIRA");
+                break;
+            case 2:
+                JOptionPane.showMessageDialog(null, "O dia da semana é\n TERÇA-FEIRA");
+                break;
+            case 3:
+                JOptionPane.showMessageDialog(null, "O dia da semana é\n QUARTA-FEIRA");
+                break;
+            case 4:
+                JOptionPane.showMessageDialog(null, "O dia da semana é\n QUINTA-FEIRA");
+                break;
+            case 5:
+                JOptionPane.showMessageDialog(null, "O dia da semana é\n SEXTA_FEIRA");
+                break;
+            case 6:
+                JOptionPane.showMessageDialog(null, "O dia da semana é\n SÁBADO");
+                break;
+            case 7:
+                JOptionPane.showMessageDialog(null, "O dia da semana é\n DOMINGO");
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Este número não esta no intervalo de 1 a 7");
+                break;
+        }
+    }
+}

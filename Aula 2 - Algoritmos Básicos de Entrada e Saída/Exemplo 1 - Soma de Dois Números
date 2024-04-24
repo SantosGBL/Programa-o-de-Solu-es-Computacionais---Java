@@ -1,1 +1,23 @@
+package com.mycompany.somadedoisnumeros;
+
+import javax.swing.JOptionPane;
+
+public class SomaDeDoisNumeros {
+
+    public static void main(String[] args) {
+        // Declaração de Variaveis
+        double numero1, numero2, soma;
+        
+        // Entrada de Dados
+        // Receber 2 numeros digitados pelo usuario
+        // Atribuir os 2 numeros para a variavel numero1 e numero2
+        numero1 = Double.parseDouble ( JOptionPane.showInputDialog("Digite o primeiro valor"));
+        
+        numero2 = Double.parseDouble( JOptionPane.showInputDialog("Digite o segundo valor"));
+        // Processamento
+        soma = numero1 + numero2;
+        // Saida de Dados
+        JOptionPane.showMessageDialog(null, "A soma dos 2 valores é: " + soma);
+    }
+}
 

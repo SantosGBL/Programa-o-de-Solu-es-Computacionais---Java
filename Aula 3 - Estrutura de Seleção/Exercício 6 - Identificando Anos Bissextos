@@ -1,0 +1,20 @@
+//6-Ler um número inteiro e responder se ele é bissexto ou não. Um ano bissexto tem as
+//seguintes características:
+//- é múltiplo de quatro e não é múltiplo de 100 ou
+//- é múltiplo de 400
+
+package com.mycompany.identificandoanosbissextos;
+
+import javax.swing.JOptionPane;
+
+public class IdentificandoAnosBissextos {
+
+    public static void main(String[] args) {
+       int ano = Integer.parseInt(JOptionPane.showInputDialog("Informe um ano: "));
+        if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
+           JOptionPane.showMessageDialog(null, "O ano de " + ano + " é: \nBissexto");
+       }else {
+            JOptionPane.showMessageDialog(null, "O ano de " + ano + "\nNão é Bissexto");
+        }
+    }
+}

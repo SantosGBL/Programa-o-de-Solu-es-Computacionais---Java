@@ -1,0 +1,19 @@
+//2. Escreva um programa que faz a leitura de dois números reais e verifica se eles são iguais. 
+//Se forem, o programa deve mostrar uma mensagem ao usuário informando-o disso. Caso contrário, 
+//o programa somente termina.
+
+package com.mycompany.verificandoaigualdadedenumerosreais;
+
+import javax.swing.JOptionPane;
+
+public class VerificandoaIgualdadedeNumerosReais {
+
+    public static void main(String[] args) {
+        double valor1 = Double.parseDouble(JOptionPane.showInputDialog("Informe um valor: "));
+        double valor2 = Double.parseDouble(JOptionPane.showInputDialog("Informe um valor: "));
+        
+        if (valor1 == valor2){
+            JOptionPane.showMessageDialog(null, "Os valores são iguais ");
+        }
+    }
+}

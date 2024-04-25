@@ -1,0 +1,39 @@
+//5. Escreva um programa que lê três inteiros a partir do teclado e imprime a soma, a média, o produto, 
+//o menor e omaior desses números.
+package com.mycompany.operacoesbasicascomtresnumerosinteiros;
+
+import javax.swing.JOptionPane;
+
+public class OperacoesBasicascomTresNumerosInteiros {
+
+    public static void main(String[] args) {
+        int a = Integer.parseInt(JOptionPane.showInputDialog("Informe o primeiro valor: "));
+        int b = Integer.parseInt(JOptionPane.showInputDialog("Informe o segundo valor: "));
+        int c = Integer.parseInt(JOptionPane.showInputDialog("Informe o terceiro valor: "));
+        
+        int soma = a + b + c;
+        int media = soma / 3;
+        int mult = a * b * c;
+       
+        JOptionPane.showMessageDialog(null,"Soma dos números: " + soma + "\nProduto dos números: " + mult + "\nMédia dos números: " + media);
+        
+        int maior = a;
+        int menor = a;
+        
+        if (b > maior){
+            maior = b;
+        }
+        if (b < menor){
+                menor = b;
+        }  
+        if (c > maior){
+                maior = c;
+        }
+        if (c < menor){
+                menor = c;
+//Método para descobrir o maior e o menor com 3 ou mais variaveis 
+                
+        JOptionPane.showMessageDialog(null, "O maior dos números é: " + maior + "\nO menor número é: " + menor);
+        }   
+    }
+}

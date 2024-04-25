@@ -1,0 +1,23 @@
+//4. Escreva um programa que pede para o usuário inserir dois números, obtém os números do usuário e então
+//imprime o maior número seguido pelas palavras “é o maior”. Se os números forem iguais, imprime a mensagem 
+//“Estes números são iguais”.
+
+package com.mycompany.identificandoomaiornumeroeverificandoigualdade;
+
+import javax.swing.JOptionPane;
+
+public class IdentificandooMaiorNumeroeVerificandoIgualdade {
+
+    public static void main(String[] args) {
+        double valor1 = Double.parseDouble(JOptionPane.showInputDialog("Informe o primeiro valor"));
+        double valor2 = Double.parseDouble(JOptionPane.showInputDialog("Informe o segundo valor"));
+        
+        if (valor1 > valor2){
+            JOptionPane.showMessageDialog(null,"O primeiro valor é o maior");
+        }else if (valor2 > valor1){
+            JOptionPane.showMessageDialog(null,"O segundo valor é o maior");
+        }else {
+            JOptionPane.showMessageDialog(null,"Os dois valores são iguais");
+        }
+    }
+}

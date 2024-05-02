@@ -1,1 +1,34 @@
+//9. Escreva um programa que lê duas notas de um estudante, ambas sendo valores reais. O programa deve calcular a
+//média e exibir um texto para o usuário conforme a tabela a seguir:
+//Nota Texto
+//média >= 9 Parabéns, continue assim!
+//7 <= média < 9 Aprovado.
+//6 <= média < 7 Aprovado no limite, estude um pouco mais.
+//2 < = média < 6 Não está aprovado mas ainda pode fazer a segunda época
+///média < 2 Reprovado. Nos vemos semestre que vem.
 
+package com.mycompany.avaliacaodenotasdeestudanteerecomendacoes;
+
+import javax.swing.JOptionPane;
+
+public class AvaliacaodeNotasdeEstudanteeRecomendacoes {
+
+    public static void main(String[] args) {
+        double nota1 = Double.parseDouble(JOptionPane.showInputDialog("Informe a primeira nota: "));
+        double nota2 = Double.parseDouble(JOptionPane.showInputDialog("Informe a segunda nota: "));
+        
+        double media = (nota1 + nota2) / 2;
+        if(media >= 9){
+            JOptionPane.showMessageDialog(null, "Sua média é: " + media + "\nParábens, continue assim!!");
+        }else if(media >= 7 && media < 9 ){
+            JOptionPane.showMessageDialog(null, "Sua média é: " + media + "\nAPROVADO");
+        }else if(media >= 6 && media < 7){
+            JOptionPane.showMessageDialog(null, "Sua média é: " + media + "\nAprovado no limite, estude um pouco mais");
+        }else if(media >= 2 && media < 6){
+            JOptionPane.showMessageDialog(null, "Sua média é: " + media + "\nNão está aprovado mas ainda pode fazer a segunda época");
+        }else{
+            JOptionPane.showMessageDialog(null, "Sua média é: " + media + "\nReprovado. Nos vemos semestre que vem"
+            + "\n mlk burro da porra 🤣🤣🤣🤣");
+        }  
+    }
+}

@@ -1,1 +1,45 @@
+//7 - Faça um programa que lê um valor real, representando o valor de uma peça de roupa. A seguir, o programa 
+//deve ler um inteiro (0, 1 ou 2) os quais representam as seguintes opções:
+//0 – Compra à vista
+//1 – Compra parcelada no cartão
+//2 – Crediário
+//Na opção 0, o programa deve calcular quanto custa a peça de roupa com 10% de desconto.
+
+//Na opção 1, o programa deve perguntar ao usuário quantas parcelas deseja utilizar e exibir o valor da parcela.
+
+//Na opção 2, o usuário pagará juros de 10% sobre o valor total. O programa deve ler o número de parcelas
+
+//desejado e exibir o valor de cada parcela, que é calculado sobre o valor com juros.
+//Caso o usuário digite alguma opção diferente de 0, 1 ou 2, o programa deve informar “opção inválida” e
+//terminar.
+
+package com.mycompany.calculodeprecosderoupasemetodosdepagamento;
+
+import javax.swing.JOptionPane;
+
+public class CalculodePrecosdeRoupaseMetodosdePagamento {
+
+    public static void main(String[] args) {
+        double roupa = Double.parseDouble(JOptionPane.showInputDialog("Informe o valor da peça de roupa: "));
+        int pagamento = Integer.parseInt(JOptionPane.showInputDialog("Informe a forma de pagamento:\n" + 
+                                           "0 - Á vista      1 - Parcelado no cartão     2 - Crediário"));
+        
+        switch(pagamento){
+            case 0:
+                JOptionPane.showMessageDialog(null, "O preço final com 10% de desconto é:\n R$ " + (roupa - (roupa * 0.10)));
+                break;
+            case 1:
+                int numeroParcelas = Integer.parseInt(JOptionPane.showInputDialog("Quantas vezes gostaria de parcelar?"));
+                JOptionPane.showMessageDialog(null, "O preço a ser pago por parcela é de: \nR$ " + (roupa / numeroParcelas));
+                break;
+            case 2:
+                int numeroParcelasCrediario = Integer.parseInt(JOptionPane.showInputDialog("Quantas vezes gostaria de parcelar?"));
+                JOptionPane.showMessageDialog(null, "O preço a ser pago por parcela com 10% de juros é de: \nR$ " + (roupa + (roupa * 0.10) / numeroParcelasCrediario));
+                break;
+        default:
+                JOptionPane.showMessageDialog(null, "Opção invalida !");
+                break;
+        }        
+    }
+}
 

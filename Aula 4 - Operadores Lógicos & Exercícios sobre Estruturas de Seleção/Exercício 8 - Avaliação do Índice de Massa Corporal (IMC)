@@ -1,1 +1,39 @@
+//8. Escreva um programa que lê a altura e peso do usuário e calcula o seu IMC, índice de massa corpórea.
+//O programa deve exibir um texto para o usuário conforme a tabela abaixo:
+//IMC 
+//Abaixo de 18,5 Abaixo do peso ideal.
+//Entre 18,5 e 24,9 Peso ideal, muito bem.
+//Entre 25,0 e 29,9 Sobrepeso, um regime leve pode ajudar.
+//Entre 30,0 e 34,9 Obesidade leve.
+//Entre 35,0 e 39,9 Obesidade moderada.
+//Acima de 40 Obesidade mórbida.
+package com.mycompany.avaliacaodoindicedemassacorporalimc;
 
+import javax.swing.JOptionPane;
+
+public class AvaliacaodoIndicedeMassaCorporalIMC {
+
+    public static void main(String[] args) {
+        double altura = Double.parseDouble(JOptionPane.showInputDialog("Informe sua altura (em metros): "));
+        double peso = Double.parseDouble(JOptionPane.showInputDialog("Informe seu peso (em quilogramas): "));
+        
+        double imc = peso / Math.pow(altura, 2);
+        
+        // Arredondar o IMC para duas casas decimais
+        imc = Math.round(imc * 100.0) / 100.0;
+        
+        if(imc < 18.5){
+            JOptionPane.showMessageDialog(null, "Seu IMC é de: " + imc + "\nSe encontra abaixo do peso ideal");
+        }else if(imc >= 18.5 && imc <= 24.9){
+            JOptionPane.showMessageDialog(null, "Seu IMC é de: " + imc + "\nSe encontra com o peso ideal, muito bem!");
+        }else if(imc >= 25 && imc <= 29.9){
+            JOptionPane.showMessageDialog(null, "Seu IMC é de: " + imc + "\nSe encontra com sobrepeso, um regime leve pode ajudar");
+        }else if(imc >= 30 && imc <= 34.9){
+            JOptionPane.showMessageDialog(null, "Seu IMC é de: " + imc + "\nSe encontra com obsidade leve");
+        }else if(imc >= 35 && imc <= 39.9){
+            JOptionPane.showMessageDialog(null, "Seu IMC é de: " + imc + "\nSe encontra com obsidade moderada");
+        }else{
+            JOptionPane.showMessageDialog(null, "Seu IMC é de: " + imc + "\nSe encontra com obsidade mórbita");
+        }
+    }
+}

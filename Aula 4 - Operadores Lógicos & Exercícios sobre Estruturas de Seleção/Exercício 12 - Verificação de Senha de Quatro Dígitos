@@ -1,1 +1,41 @@
+//12. Escreva um programa que verifica se um dado número inteiro de quatro dígitos é uma senha válida. Para ser
+//considerado como uma senha válida, um número tem que ter as seguintes características:
+//- O primeiro dígito da esquerda para a direita tem que ser 8 ou 5
+//- O quarto dígito da esquerda para a direita tem que ser 5 ou 1
+//- A soma do segundo com o terceiro dígitos tem que ser 3 caso o quarto dígito seja 5 e 0 caso ele seja 1
+//Por exemplo, o número 8125 é uma senha válida pois começa com 8, termina com 5 e a soma dos dois dígitos do
+//meio é 3.
 
+package com.mycompany.verificacaodesenhadequatrodigitos;
+
+import javax.swing.JOptionPane;
+
+public class VerificacaodeSenhadeQuatroDigitos {
+
+    public static void main(String[] args) {
+        int senha = Integer.parseInt(JOptionPane.showInputDialog
+        ("Informe uma senha:\n- Um número inteiro de quatro dígitos que atenda os requisitos necessários:\n"
+                + "- O primeiro dígito da esquerda para a direita tem que ser 8 ou 5\n"
+                + "- O quarto dígito da esquerda para a direita tem que ser 5 ou 1\n"
+                + "- A soma do segundo com o terceiro dígitos tem que ser 3 caso o quarto dígito seja 5 e 0 caso ele seja 1"));
+        
+        int primeiroDigito = senha / 1000;
+        int segundoDigito = (senha / 100) % 10;
+        int terceiroDigito = (senha / 10) % 10;
+        int quartoDigito = senha % 10;
+        
+        // Verificando se o número tem quatro dígitos
+        if(senha < 1000 || senha > 9999){
+            JOptionPane.showMessageDialog(null, "Senha inválida, Deve ter quatro dígitos");
+        }else if((primeiroDigito != 5 && primeiroDigito != 8) || (quartoDigito != 1 && quartoDigito != 5)){
+            JOptionPane.showMessageDialog(null, "Senha inválida, O número não atende os requisitos");
+        }else {
+            int soma = segundoDigito + terceiroDigito;
+            if((quartoDigito == 5 && soma != 3) || (quartoDigito == 1 && soma != 0)){
+            JOptionPane.showMessageDialog(null, "Senha inválida, O número não atende os requisitos");
+            }else {
+                JOptionPane.showMessageDialog(null, "Senha válida");
+            }
+        }
+    }
+}

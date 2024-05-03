@@ -27,8 +27,7 @@ public class AvaliacaodeNotasdeEstudanteeRecomendacoes {
         }else if(media >= 2 && media < 6){
             JOptionPane.showMessageDialog(null, "Sua média é: " + media + "\nNão está aprovado mas ainda pode fazer a segunda época");
         }else{
-            JOptionPane.showMessageDialog(null, "Sua média é: " + media + "\nReprovado. Nos vemos semestre que vem"
-            + "\n mlk burro da porra 🤣🤣🤣🤣");
+            JOptionPane.showMessageDialog(null, "Sua média é: " + media + "\nReprovado. Nos vemos semestre que vem");
         }  
     }
 }

@@ -1,1 +1,40 @@
+//13. Escreva um programa que lê três números inteiros diferentes e os exibe em ordrescente. Se o usuário digitar
+//números iguais, seu programa deve exibir uma mensagem de erro e terminar.
+package com.mycompany.ordenacaocrescentedetresnumerosinteiros;
 
+import javax.swing.JOptionPane;
+
+public class OrdenacaoCrescentedeTresNumerosInteiros {
+
+    public static void main(String[] args) {
+        int num1 = Integer.parseInt(JOptionPane.showInputDialog("Informe o 1º número: "));
+        int num2 = Integer.parseInt(JOptionPane.showInputDialog("Informe o 2º número: "));
+        int num3 = Integer.parseInt(JOptionPane.showInputDialog("Informe o 3º número: "));
+        
+        if (num1 == num2 || num1 == num3 || num2 == num3){
+            JOptionPane.showMessageDialog(null, "Erro: Os números devem ser diferentes");
+        }
+        
+        //Isso significa que se o valor de num1 for maior que o valor de num2, os valores dessas variáveis serão 
+        //trocados. O valor de num1 é armazenado temporariamente em temp, depois o valor de num2 é copiado para 
+        //num1, e finalmente o valor armazenado em temp (que é o valor original de num1) é copiado para num2.
+        int temp;
+        if(num1 > num2){
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
+        if(num1 > num3){
+            temp = num1;
+            num1 = num3;
+            num3 = temp;
+        }
+        if(num2 > num3){
+            temp = num2;
+            num2 = num3;
+            num3 = temp;
+        }
+        JOptionPane.showMessageDialog(null, "Os números em ordem cresente é: \n" 
+                + num1 + ", " + num2 + "e " + num3);
+    }
+}

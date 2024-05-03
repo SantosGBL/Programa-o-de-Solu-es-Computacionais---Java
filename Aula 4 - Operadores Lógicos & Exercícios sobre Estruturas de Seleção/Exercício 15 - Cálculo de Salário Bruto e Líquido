@@ -1,1 +1,34 @@
+//15. Faça um programa que lê os seguintes dados:
+//- valor/hora (é um número real positivo)
+//- horas trabalhadas (é um inteiro)
+//- imposto (um real entre 0 e 1, inclusive)
+//- comissão (é um real positivo)
+//Seu programa deve calcular e exibir para o usuário os seguintes valores:
+//Salário bruto, que é igual ao valor/hora multiplicado pelo número de horas trabalhadas.
+//Salário líquido, que é igual ao salário bruto menos o imposto mais a comissão. Note que a comissão somente
+//entrará nos cálculos caso o número de horas trabalhadas seja pelo menos 120.
 
+package com.mycompany.calculodesalariobrutoeliquido;
+
+import javax.swing.JOptionPane;
+
+public class CalculodeSalarioBrutoeLiquido {
+
+    public static void main(String[] args) {
+        double valorHora = Double.parseDouble(JOptionPane.showInputDialog("Informe o valor da hora: "));
+        int horasTrabalhada = Integer.parseInt(JOptionPane.showInputDialog("Informe quantas horas trabalhadas: "));
+        double imposto = Double.parseDouble(JOptionPane.showInputDialog("Informe o valor do imposto (entre 0 e 1): "));
+        double comissao = Double.parseDouble(JOptionPane.showInputDialog("Informe o valor da comissão: "));
+        
+        double salarioBruto = valorHora * horasTrabalhada;
+        double salarioLiquido = salarioBruto - (salarioBruto * imposto) + comissao;
+        double salarioLiquidoSemComissao = salarioBruto - (salarioBruto * imposto);
+        
+        JOptionPane.showMessageDialog(null, "Seu salário bruto é : \nR$" + salarioBruto);
+        if(horasTrabalhada >= 120){
+            JOptionPane.showMessageDialog(null, "Seu salário líquido é : \nR$" + salarioLiquido);
+        } else {
+            JOptionPane.showMessageDialog(null, "Seu salário líquido sem comissão é : \nR$" + salarioLiquidoSemComissao);
+        }
+    }
+}

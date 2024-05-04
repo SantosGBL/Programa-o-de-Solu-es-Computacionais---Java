@@ -1,0 +1,19 @@
+//1. Escreva um programa que exibe os primeiros 10 números naturais. Faça versões usando while
+
+package com.mycompany.primeiros10numerosnaturaiswhile;
+
+import javax.swing.JOptionPane;
+
+public class Primeiros10NumerosNaturaisWhile {
+
+    public static void main(String[] args) {
+        String resultado = "";
+        int i = 0;
+        
+        while (i <= 9){
+            resultado += i + "\n";
+            i++;
+        }
+        JOptionPane.showMessageDialog(null, "Os 10 primeiros números naturais são: \n"+ resultado);
+   }
+}

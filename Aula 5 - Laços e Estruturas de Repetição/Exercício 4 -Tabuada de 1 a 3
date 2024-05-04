@@ -1,1 +1,45 @@
+//4. Escreva um programa que exibe a tabuada de todos os números entre 1 e 3.
 
+package com.mycompany.tabuadadeumaotres;
+
+import javax.swing.JOptionPane;
+
+public class TabuadadeUmaoTres {
+
+    public static void main(String[] args) {
+        String tabuada1 = "";
+        
+        for(int i = 1; i <= 10; i++){
+            tabuada1 += 1 + " x " + i + " = " + (1* i) + "\n";  
+        }
+        JOptionPane.showMessageDialog(null, "A tabuada do número " + 1 + " :\n" + tabuada1);
+        
+        String tabuada2 = "";
+        
+        for(int j = 1; j <= 10; j++){
+            tabuada2 += 2 + " x " + j + " = " + (2* j) + "\n";  
+        }
+        JOptionPane.showMessageDialog(null, "A tabuada do número " + 2 + " :\n" + tabuada2);
+        
+         String tabuada3 = "";
+        
+        for(int k = 1; k <= 10; k++){
+            tabuada3 += 3 + " x " + k + " = " + (3* k) + "\n";  
+        }
+        JOptionPane.showMessageDialog(null, "A tabuada do número " + 3 + " :\n" + tabuada3);
+    }
+}
+              
+    /*// resolução do professor
+               String resultado = "";
+        for (int i = 1; i <= 3; i++) {
+            resultado += "Tabuada do " + i + ":\n";
+            for (int j = 1; j <= 10; j++) {
+                resultado += i + " x " + j + " = " + (i * j) + "\n";
+            }
+            resultado += "\n";
+        }
+        JOptionPane.showMessageDialog(null, resultado);
+    }
+}
+*/

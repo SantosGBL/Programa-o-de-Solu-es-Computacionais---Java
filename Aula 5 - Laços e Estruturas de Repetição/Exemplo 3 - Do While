@@ -1,0 +1,16 @@
+package com.mycompany.exemplodowhileaula5;
+
+import javax.swing.JOptionPane;
+
+public class ExemploDoWhileAula5 {
+
+    public static void main(String[] args) {
+        double nota1, nota2;
+        int contador = 1;
+        
+        do{
+            JOptionPane.showMessageDialog(null, contador);
+            contador++;
+        }while (contador <= 5);
+    }
+}

@@ -1,1 +1,19 @@
+//3. Escreva um programa que receba um número e, usando laços de repetição, calcule e mostre a tabuada desse 
+//número
 
+package com.mycompany.tabuadadeumnumero;
+
+import javax.swing.JOptionPane;
+
+public class TabuadadeumNumero {
+    
+    public static void main(String[] args) {
+        int num = Integer.parseInt(JOptionPane.showInputDialog("Informe um número: "));
+        String tabuada = "";
+        
+        for(int i = 1; i <= 10; i++){
+            tabuada += num + " x " + i + " = " + (num * i) + "\n";  
+        }
+        JOptionPane.showMessageDialog(null, "A tabuada do número " + num + " :\n" + tabuada);
+    }
+}

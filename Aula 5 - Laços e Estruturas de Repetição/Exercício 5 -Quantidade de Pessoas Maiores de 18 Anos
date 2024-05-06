@@ -1,1 +1,22 @@
+//5. Faça um programa que receba a idade de 10 pessoas e que calcule e mostre a quantidade de pessoas com idade 
+//maior ou igual a 18 anos.
 
+package com.mycompany.quantidadedepessoasmaioresde18anos;
+
+import javax.swing.JOptionPane;
+
+public class QuantidadedePessoasMaioresde18Anos {
+
+    public static void main(String[] args) {
+        int maiorIdade = 0;
+        
+        for(int i = 1; i <= 10; i++){
+           int idade = Integer.parseInt(JOptionPane.showInputDialog("Informe a idade da pessoa " + i + " : "));
+            
+            if (idade >= 18){
+                maiorIdade++;
+            }
+        }
+        JOptionPane.showMessageDialog(null, "A " + maiorIdade + " pessoas maiores de idade");
+    }  
+}

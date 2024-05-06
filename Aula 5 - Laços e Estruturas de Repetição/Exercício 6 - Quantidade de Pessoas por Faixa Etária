@@ -1,1 +1,40 @@
+//6. Escreva um programa que receba a idade de 10 pessoas e que calcule e mostre a
+//quantidade de pessoas em cada faixa etária:
+//● Até 15 anos;
+//● De 16 até 30 anos;
+//● De 31 até 45 anos;
+//● Maior do que 45 anos.
 
+package com.mycompany.quantidadedepessoasporfaixaetaria;
+
+import javax.swing.JOptionPane;
+
+public class QuantidadedePessoasporFaixaEtaria {
+
+    public static void main(String[] args) {
+       int ate15 = 0;
+       int de16A30 = 0;
+       int de31A45 = 0;
+       int maisDe45 = 0;
+       
+       for(int i = 1; i <= 10; i++){
+           int idade = Integer.parseInt(JOptionPane.showInputDialog("Informe a idade da pessoa " + i + " :"));
+
+           if(idade <= 15){
+               ate15++;
+           }
+           else if(idade >= 16 && idade <= 30){
+               de16A30++;
+           }
+           else if(idade >= 31 && idade <= 45){
+               de31A45++;
+           }
+           else if(idade > 45){
+               maisDe45++;
+           }   
+       }
+       JOptionPane.showMessageDialog(null, "Entre as 10 pessoas a :\n\nIdade até 15 anos : " + ate15 + 
+               "\nIdade de 16 até 30 anos : " + de16A30 + "\nIdade de 31 até 45 anos : " + de31A45 + 
+               "\nIdade maior do que 45 anos: " + maisDe45);  
+    }   
+}

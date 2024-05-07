@@ -1,1 +1,19 @@
+//8. Escreva um programa que calcula o fatorial de um valor natural digitado pelo usuário 
+//(Ex: 4! = 4*3*2*1 = 24).
 
+package com.mycompany.calculodofatorialdeumnumero;
+
+import javax.swing.JOptionPane;
+
+public class CalculodoFatorialdeumNumero {
+
+    public static void main(String[] args) {
+    int numero = Integer.parseInt(JOptionPane.showInputDialog("Informe o número que deseja calcular o fatorial :"));
+    //long pode armazenar números inteiros entre -2^63 e 2^63-1 mais do que o int
+    long fatorial = 1;
+    for(int i = 1;i <= numero; i++){
+        fatorial *= i;
+    }
+    JOptionPane.showMessageDialog(null, numero + "! é = " + fatorial);
+    }
+}

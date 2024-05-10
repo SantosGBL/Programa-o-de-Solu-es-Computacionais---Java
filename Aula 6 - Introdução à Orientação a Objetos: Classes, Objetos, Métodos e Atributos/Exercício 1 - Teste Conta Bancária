@@ -1,0 +1,31 @@
+//2.Implemente uma classe de teste chamada TesteContaBancaria que realiza as seguintes ações:
+//2.1. Instancia dois objetos da classe ContaBancaria.
+//2.2. Solicita e atribui valores aos atributos das contas bancárias.
+//2.3. Chama cada um dos métodos definidos na classe ContaBancaria.
+//2.4. Exibe os valores dos atributos das contas bancárias utilizando os métodos getters.                                                     
+
+package com.mycompany.testecontabancaria;
+
+import javax.swing.JOptionPane;
+
+public class TesteContaBancaria {
+
+    public static void main(String[] args) {
+        
+    String titular = JOptionPane.showInputDialog("Informe o nome do titular da conta bancária :");
+    double saldo = Double.parseDouble(JOptionPane.showInputDialog("Informe o saldo da conta bancária :"));
+    ContaBancaria contaBancaria = new ContaBancaria(titular, saldo);        
+    
+    int opcao = Integer.parseInt(JOptionPane.showInputDialog("Informe o método :\n1 - deposito  2 - saque"));
+    switch(opcao){
+        case 1:
+            contaBancaria.calculoDeposito(opcao);
+            break;
+        case 2:
+            contaBancaria.calculoSaque(opcao);
+            break;
+        default :
+            JOptionPane.showMessageDialog(null, "Método invalido!!");
+        }
+    }
+}
